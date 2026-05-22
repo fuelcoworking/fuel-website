@@ -15,8 +15,8 @@ const config: Config = {
         orange: "#D4521A",
       },
       fontFamily: {
-        display: ["var(--font-syne)", "sans-serif"],
-        body: ["var(--font-inter)", "sans-serif"],
+        display: ["'42dot Sans'", "'DM Sans'", "ui-sans-serif"],
+        body: ["Inter", "ui-sans-serif"],
       },
     },
   },

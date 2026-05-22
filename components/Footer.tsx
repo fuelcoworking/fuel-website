@@ -42,7 +42,7 @@ export default function Footer() {
           FUEL COWORKING
         </h2>
 
-        <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-cream/60">
+        <div className="font-display mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-cream/60">
           <a
             href="https://instagram.com"
             target="_blank"

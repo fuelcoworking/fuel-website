@@ -16,7 +16,7 @@ export default function Mission() {
           <h2 className="font-display text-4xl font-bold text-white md:text-5xl">
             our mission_
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-white/90">
+          <p className="font-body mt-6 text-lg leading-relaxed text-white/90">
             We believe great work happens when talented people share space, ideas,
             and momentum. FUEL exists to remove friction from your day so you can
             focus on what matters — building something meaningful alongside a

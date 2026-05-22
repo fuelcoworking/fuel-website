@@ -11,40 +11,47 @@ export default function Hero() {
     if (!typedRef.current) return;
 
     const typed = new Typed(typedRef.current, {
-      strings: ["desk", "office", "community", "workspace"],
-      typeSpeed: 60,
-      backSpeed: 40,
-      backDelay: 1500,
+      strings: ["workspace", "office", "studio", "community", "hub"],
+      typeSpeed: 55,
+      backSpeed: 35,
+      backDelay: 2200,
       loop: true,
+      showCursor: false,
+      smartBackspace: true,
     });
 
     return () => typed.destroy();
   }, []);
 
   return (
-    <section className="relative min-h-screen">
+    <section className="relative h-[62vh] min-h-[480px]">
       <Image
         src="/images/hero.jpg"
         alt="Fuel coworking space in Spokane"
         fill
         priority
-        className="object-cover"
+        className="object-cover object-center"
       />
-      <div className="absolute inset-0 bg-dark/60" aria-hidden />
+      <div className="absolute inset-0 bg-black/20" aria-hidden />
 
-      <div className="relative z-10 flex min-h-screen flex-col justify-center px-6 pb-28 pt-24">
-        <h1 className="font-display text-5xl font-bold leading-tight text-cream md:text-7xl lg:text-8xl">
-          <span className="text-primary">your</span>{" "}
-          <span ref={typedRef} className="text-cream" /> in spokane.
+      <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 pt-14">
+        <h1 className="font-display text-6xl font-normal leading-tight text-white lg:text-7xl">
+          <span>
+            <span className="text-primary">your </span>
+            <span ref={typedRef} />
+            _
+          </span>
+          <br />
+          in spokane.
         </h1>
-      </div>
 
-      <a
-        href="#contact"
-        className="absolute bottom-8 left-6 z-10 rounded-full bg-primary px-8 py-3 text-sm font-medium text-cream transition-colors hover:bg-orange md:left-8"
-      >
-        Get in touch
-      </a>
+        <a
+          href="#contact"
+          className="font-display text-sm font-normal lowercase text-primary transition-opacity hover:opacity-75"
+        >
+          try a free day
+        </a>
+      </div>
     </section>
   );
 }

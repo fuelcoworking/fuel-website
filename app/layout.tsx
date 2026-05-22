@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-
-const syne = Syne({
-  subsets: ["latin"],
-  variable: "--font-syne",
-  display: "swap",
-});
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500"],
   variable: "--font-inter",
   display: "swap",
 });
@@ -27,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${syne.variable} ${inter.variable} font-body bg-cream text-dark antialiased`}
+        className={`${inter.variable} ${inter.className} font-body bg-cream text-dark antialiased`}
       >
         {children}
       </body>

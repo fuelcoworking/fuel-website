@@ -54,7 +54,7 @@ export default function Workspaces() {
                 <h3 className="font-display text-xl font-bold text-dark">
                   {space.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-dark/70">
+                <p className="font-body mt-2 text-sm leading-relaxed text-dark/70">
                   {space.description}
                 </p>
               </div>

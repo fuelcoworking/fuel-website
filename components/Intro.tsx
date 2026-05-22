@@ -1,23 +1,22 @@
 export default function Intro() {
   return (
-    <section className="bg-cream px-6 py-24">
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:gap-16 md:items-start">
-        <h2 className="font-display text-4xl font-bold leading-tight text-dark md:text-5xl lg:text-6xl">
-          FUEL is where Spokane comes to work, build, and belong.
-        </h2>
+    <section className="bg-[#EDE9E3] px-8 py-16 lg:px-16 lg:py-20">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 md:grid-cols-5">
+        <p className="font-display text-2xl font-normal leading-snug text-neutral-900 md:col-span-2 lg:text-3xl">
+          Welcome to FUEL, your local home for entrepreneurs, creatives, and
+          community builders.
+        </p>
 
-        <div className="space-y-6 text-base leading-relaxed text-dark/80 md:text-lg">
-          <p>
-            We&apos;re a coworking space designed for freelancers, founders, and
-            small teams who want more than a coffee shop and less overhead than a
-            traditional lease. Hot desks, dedicated desks, private offices, and
-            meeting rooms — all under one roof in the heart of the city.
+        <div className="flex flex-col gap-y-4 md:col-span-3">
+          <p className="font-body text-[15px] leading-relaxed text-neutral-600">
+            From freelancers and flexible workers to startup teams, our coworking
+            studios, private offices, and memberships are designed to support your
+            productivity and elevate your workday.
           </p>
-          <p>
-            Our mission is simple: remove the friction from your workday so you can
-            focus on what matters. At FUEL, you get reliable infrastructure, a
-            welcoming community, and the momentum that comes from sharing space
-            with people who are building something real.
+          <p className="font-body text-[15px] leading-relaxed text-neutral-600">
+            Our meeting and event spaces foster collaboration, creativity, and
+            growth. FUEL is where business and community thrive, and where the
+            neighborhood comes together to make a positive impact.
           </p>
         </div>
       </div>

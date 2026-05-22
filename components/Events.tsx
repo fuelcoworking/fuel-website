@@ -76,13 +76,13 @@ export default function Events() {
                 key={event.name}
                 className="w-72 shrink-0 snap-start rounded-2xl border border-dark/10 bg-white p-6"
               >
-                <p className="text-xs font-medium uppercase tracking-wide text-primary">
+                <p className="font-display text-xs font-medium uppercase tracking-wide text-primary">
                   {event.type}
                 </p>
                 <h3 className="mt-3 font-display text-xl font-bold text-dark">
                   {event.name}
                 </h3>
-                <p className="mt-2 text-sm text-dark/60">{event.date}</p>
+                <p className="font-body mt-2 text-sm text-dark/60">{event.date}</p>
               </article>
             ))}
           </div>
