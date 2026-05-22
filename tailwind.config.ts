@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#E8593C",
+        accent: "#D15A39",
+        maroon: "#7A1010",
         dark: "#111111",
         cream: "#F5F0EB",
         orange: "#D4521A",
@@ -17,6 +19,9 @@ const config: Config = {
       fontFamily: {
         display: ["'42dot Sans'", "'DM Sans'", "ui-sans-serif"],
         body: ["Inter", "ui-sans-serif"],
+      },
+      maxWidth: {
+        site: "90rem",
       },
     },
   },

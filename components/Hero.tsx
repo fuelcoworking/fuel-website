@@ -24,33 +24,24 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[62vh] min-h-[480px]">
+    <section className="relative h-[58vh] min-h-[420px] md:h-[62vh] md:min-h-[480px]">
       <Image
         src="/images/hero.jpg"
-        alt="Fuel coworking space in Spokane"
+        alt="FUEL coworking — white letters on a wooden table"
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[center_40%]"
       />
       <div className="absolute inset-0 bg-black/20" aria-hidden />
 
-      <div className="absolute inset-0 z-10 flex flex-col justify-between p-8 pt-14">
-        <h1 className="font-display text-6xl font-normal leading-tight text-white lg:text-7xl">
-          <span>
-            <span className="text-primary">your </span>
-            <span ref={typedRef} />
-            _
+      <div className="absolute inset-0 z-10 mx-auto max-w-site px-8 pt-12 md:px-12 md:pt-14 lg:px-16">
+        <h1 className="max-w-2xl font-display text-[2.75rem] font-normal lowercase leading-[1.1] tracking-normal text-white sm:text-5xl md:text-6xl lg:text-[4.25rem]">
+          <span className="block">
+            <span className="text-accent">your </span>
+            <span ref={typedRef} />_
           </span>
-          <br />
-          in spokane.
+          <span className="block">in spokane.</span>
         </h1>
-
-        <a
-          href="#contact"
-          className="font-display text-sm font-normal lowercase text-primary transition-opacity hover:opacity-75"
-        >
-          try a free day
-        </a>
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 export default function Intro() {
   return (
-    <section className="bg-[#EDE9E3] px-8 py-16 lg:px-16 lg:py-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-12 md:grid-cols-5">
-        <p className="font-display text-2xl font-normal leading-snug text-neutral-900 md:col-span-2 lg:text-3xl">
+    <section className="bg-white px-8 py-14 md:px-12 md:py-16 lg:px-16 lg:py-20">
+      <div className="mx-auto grid max-w-site grid-cols-1 items-start gap-10 md:grid-cols-5 md:gap-12 lg:gap-16">
+        <p className="font-display text-[1.625rem] font-normal leading-snug text-neutral-900 md:col-span-2 lg:text-[1.875rem] lg:leading-[1.25]">
           Welcome to FUEL, your local home for entrepreneurs, creatives, and
           community builders.
         </p>

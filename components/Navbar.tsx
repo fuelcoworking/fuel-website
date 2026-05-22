@@ -7,18 +7,18 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-8 bg-[#7A1010]">
-      <nav className="flex h-full items-center justify-between px-8">
+    <header className="fixed inset-x-0 top-0 z-50 h-8 bg-maroon">
+      <nav className="mx-auto flex h-full max-w-site items-center justify-between px-8 md:px-12 lg:px-16">
         <a href="#" className="font-display text-[13px] font-normal text-white">
           FUEL
         </a>
 
-        <ul className="flex items-center gap-6">
+        <ul className="hidden items-center gap-8 sm:flex">
           {links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-display text-[13px] font-normal text-white"
+                className="font-display text-[13px] font-normal text-white transition-opacity hover:opacity-80"
               >
                 {link.label}
               </a>
