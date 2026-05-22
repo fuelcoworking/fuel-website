@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 function InstagramIcon() {
@@ -32,15 +33,45 @@ function LinkedInIcon() {
   );
 }
 
+function FacebookIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-5 w-5"
+      aria-hidden
+    >
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="overflow-hidden bg-black px-6 py-16">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="font-display text-[12vw] font-bold leading-[0.9] tracking-tight text-cream">
-          FUEL COWORKING
-        </h2>
+    <footer className="overflow-hidden bg-dark px-6 py-16 md:px-8">
+      <div className="mx-auto max-w-site">
+        <Image
+          src="/images/fuel-logo.png"
+          alt="FUEL — Collaboration Innovation Growth"
+          width={624}
+          height={236}
+          className="h-16 w-auto brightness-0 invert md:h-20"
+        />
+        <p className="font-display mt-4 text-sm font-medium text-amber">
+          Collaboration · Innovation · Growth
+        </p>
+        <p className="font-body mt-2 text-sm text-cream/70">
+          809 W Main Ave, Suite 212 · Spokane, WA
+        </p>
+        <a
+          href="https://fuelcoworking.com"
+          className="font-body mt-1 inline-block text-sm text-cream/70 transition-colors hover:text-amber"
+        >
+          fuelcoworking.com
+        </a>
 
         <div className="font-display mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-cream/60">
           <a
@@ -48,7 +79,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="transition-colors hover:text-primary"
+            className="transition-colors hover:text-amber"
           >
             <InstagramIcon />
           </a>
@@ -57,17 +88,23 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="transition-colors hover:text-primary"
+            className="transition-colors hover:text-amber"
           >
             <LinkedInIcon />
           </a>
-          <Link
-            href="/privacy"
-            className="transition-colors hover:text-primary"
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="transition-colors hover:text-amber"
           >
+            <FacebookIcon />
+          </a>
+          <Link href="/privacy" className="transition-colors hover:text-amber">
             Privacy Policy
           </Link>
-          <span>&copy; {year} FUEL Coworking</span>
+          <span className="font-body">&copy; {year} FUEL Coworking</span>
         </div>
       </div>
     </footer>

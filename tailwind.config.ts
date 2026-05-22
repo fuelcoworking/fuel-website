@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#E8593C",
-        accent: "#D15A39",
-        maroon: "#7A1010",
-        dark: "#111111",
-        cream: "#F5F0EB",
-        orange: "#D4521A",
+        // FUEL Brand Identity palette
+        amber: "#EF9F27",
+        dark: "#1A1A1A",
+        cream: "#F5F3EE",
+        primary: "#D85A30",
+        orange: "#D85A30",
       },
       fontFamily: {
         display: ["'42dot Sans'", "'DM Sans'", "ui-sans-serif"],

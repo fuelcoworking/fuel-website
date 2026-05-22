@@ -2,44 +2,52 @@ import Image from "next/image";
 
 const workspaces = [
   {
-    title: "Hot Desk",
+    title: "Basic",
+    price: "$100/mo",
     description:
-      "Drop in for a day or join monthly. Flexible access to open seating, fast Wi‑Fi, and shared amenities.",
+      "Hotdesk access without reservation. Your entry point to the FUEL community.",
     image: "/images/workspaces/hot-desk.jpg",
   },
   {
-    title: "Dedicated Desk",
+    title: "Hot Desk",
+    price: "$200/mo",
     description:
-      "Your own desk in our open-plan area with storage, 24/7 access, and a consistent spot to call home.",
+      "Pick any open desk daily. Fast internet, conference room credits, and unlimited coffee.",
     image: "/images/workspaces/dedicated-desk.jpg",
   },
   {
-    title: "Private Office",
+    title: "Permanent Desk",
+    price: "$400/mo",
     description:
-      "Lockable offices for teams of 2–12. Customize the layout and make it yours without long-term overhead.",
+      "Your own dedicated desk, always. Full amenities plus full community access.",
     image: "/images/workspaces/private-office.jpg",
   },
   {
-    title: "Meeting Room",
+    title: "Private Office",
+    price: "$500/mo",
     description:
-      "Bookable rooms for client calls, team syncs, and workshops — equipped with displays and whiteboards.",
+      "Private office on floor 1 or 2. Best for teams or anyone who needs focused space.",
     image: "/images/workspaces/meeting-room.jpg",
   },
 ];
 
 export default function Workspaces() {
   return (
-    <section id="workspaces" className="bg-orange px-6 py-24">
-      <div className="mx-auto max-w-6xl">
+    <section id="workspaces" className="bg-primary px-6 py-24 md:px-8">
+      <div className="mx-auto max-w-site">
         <h2 className="font-display text-4xl font-bold text-cream md:text-5xl">
-          workspaces_ for everyone
+          memberships_ for everyone
         </h2>
+        <p className="font-body mt-4 max-w-xl text-cream/90">
+          Not just a desk — a launchpad. Choose the tier that fits how you
+          collaborate, innovate, and grow.
+        </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {workspaces.map((space) => (
             <article
               key={space.title}
-              className="flex overflow-hidden rounded-2xl bg-white"
+              className="flex overflow-hidden rounded-2xl bg-cream"
             >
               <div className="relative w-28 shrink-0 self-stretch sm:w-36">
                 <Image
@@ -51,6 +59,9 @@ export default function Workspaces() {
                 />
               </div>
               <div className="flex flex-col justify-center px-5 py-6">
+                <p className="font-display text-sm font-medium text-primary">
+                  {space.price}
+                </p>
                 <h3 className="font-display text-xl font-bold text-dark">
                   {space.title}
                 </h3>

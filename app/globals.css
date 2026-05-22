@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * FUEL Brand Identity (May 2026)
+ * Amber #EF9F27 · Near-black #1A1A1A · Warm white #F5F3EE · Warm orange #D85A30
+ */
+
 /* 42dot Sans */
 @font-face {
   font-family: "42dot Sans";

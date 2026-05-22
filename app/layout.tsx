@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Fuel Coworking",
-  description: "Coworking space for creators and builders",
+  title: "FUEL Coworking | Fuel Your Next Big Idea",
+  description:
+    "Big ideas don't happen in isolation. A community-first coworking space in Spokane, WA for founders, freelancers, and forward-thinkers.",
 };
 
 export default function RootLayout({

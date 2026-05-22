@@ -11,7 +11,7 @@ export default function Hero() {
     if (!typedRef.current) return;
 
     const typed = new Typed(typedRef.current, {
-      strings: ["workspace", "office", "studio", "community", "hub"],
+      strings: ["workspace", "community", "launchpad", "idea", "hub"],
       typeSpeed: 55,
       backSpeed: 35,
       backDelay: 2200,
@@ -37,7 +37,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-10 mx-auto max-w-site px-8 pt-12 md:px-12 md:pt-14 lg:px-16">
         <h1 className="max-w-2xl font-display text-[2.75rem] font-normal lowercase leading-[1.1] tracking-normal text-white sm:text-5xl md:text-6xl lg:text-[4.25rem]">
           <span className="block">
-            <span className="text-accent">your </span>
+            <span className="text-primary">your </span>
             <span ref={typedRef} />_
           </span>
           <span className="block">in spokane.</span>
