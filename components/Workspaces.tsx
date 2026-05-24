@@ -79,7 +79,7 @@ export default function Workspaces() {
           {workspaces.map((space) => (
             <article
               key={space.title}
-              className="grid min-h-[220px] grid-cols-1 overflow-hidden rounded-xl bg-white sm:min-h-[240px] sm:grid-cols-2 lg:min-h-[280px]"
+              className="grid min-h-[220px] grid-cols-1 overflow-hidden bg-white sm:min-h-[240px] sm:grid-cols-2 lg:min-h-[280px]"
             >
               <div className="relative min-h-[180px] sm:min-h-0">
                 <Image

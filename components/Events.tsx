@@ -76,7 +76,7 @@ export default function Events() {
             {events.map((event) => (
               <article
                 key={event.name}
-                className="w-72 shrink-0 snap-start rounded-2xl border border-dark/10 bg-white p-5"
+                className="w-72 shrink-0 snap-start border border-dark/10 bg-white p-5"
               >
                 <p className="font-display text-xs font-medium uppercase tracking-wide text-primary">
                   {event.type}
