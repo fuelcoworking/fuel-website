@@ -1,4 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
+
+const nextBigWords = ["idea", "business", "venture", "project", "breakthrough"];
 
 const pillars = [
   {
@@ -24,6 +30,25 @@ const pillars = [
 ];
 
 export default function Mission() {
+  const typedRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (!typedRef.current) return;
+
+    const typed = new Typed(typedRef.current, {
+      strings: nextBigWords,
+      typeSpeed: 55,
+      backSpeed: 35,
+      backDelay: 2200,
+      loop: true,
+      showCursor: true,
+      cursorChar: "_",
+      smartBackspace: true,
+    });
+
+    return () => typed.destroy();
+  }, []);
+
   return (
     <section id="mission" className="relative min-h-[420px]">
       <Image
@@ -37,7 +62,8 @@ export default function Mission() {
       <div className="relative z-10 mx-auto flex min-h-[420px] max-w-site flex-col justify-center px-6 py-10 lg:px-10 xl:px-12">
         <div className="max-w-3xl">
           <h2 className="font-display text-4xl font-bold text-cream md:text-5xl">
-            fuel your next big idea_
+            fuel your next big{" "}
+            <span ref={typedRef} className="text-amber [&_.typed-cursor]:text-cream" />
           </h2>
           <p className="font-display mt-3 text-lg font-normal text-amber">
             Big ideas don&apos;t happen in isolation.
