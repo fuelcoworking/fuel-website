@@ -1,4 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
+
+const audienceTypes = [
+  "founders",
+  "freelancers",
+  "creators",
+  "teams",
+  "builders",
+];
 
 const workspaces = [
   {
@@ -32,42 +44,71 @@ const workspaces = [
 ];
 
 export default function Workspaces() {
+  const typedRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    if (!typedRef.current) return;
+
+    const typed = new Typed(typedRef.current, {
+      strings: audienceTypes,
+      typeSpeed: 55,
+      backSpeed: 35,
+      backDelay: 2200,
+      loop: true,
+      showCursor: true,
+      cursorChar: "_",
+      smartBackspace: true,
+    });
+
+    return () => typed.destroy();
+  }, []);
+
   return (
-    <section id="workspaces" className="bg-primary px-6 py-10 lg:px-10 xl:px-12">
+    <section id="workspaces" className="bg-primary px-6 py-14 lg:px-10 lg:py-20 xl:px-12">
       <div className="mx-auto max-w-site">
-        <h2 className="font-display text-4xl font-bold text-cream md:text-5xl">
-          memberships_ for everyone
+        <h2 className="font-display text-4xl font-bold text-cream md:text-5xl lg:text-6xl">
+          memberships for{" "}
+          <span ref={typedRef} className="text-cream [&_.typed-cursor]:text-cream" />
         </h2>
-        <p className="font-body mt-3 max-w-xl text-cream/90">
+        <p className="font-body mt-4 max-w-xl text-lg text-cream/90">
           Not just a desk — a launchpad. Choose the tier that fits how you
           collaborate, innovate, and grow.
         </p>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:gap-8">
           {workspaces.map((space) => (
             <article
               key={space.title}
-              className="flex overflow-hidden rounded-2xl bg-cream"
+              className="grid min-h-[220px] grid-cols-1 overflow-hidden rounded-xl bg-white sm:min-h-[240px] sm:grid-cols-2 lg:min-h-[280px]"
             >
-              <div className="relative w-28 shrink-0 self-stretch sm:w-36">
+              <div className="relative min-h-[180px] sm:min-h-0">
                 <Image
                   src={space.image}
                   alt={space.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 112px, 144px"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                 />
               </div>
-              <div className="flex flex-col justify-center px-4 py-4">
-                <p className="font-display text-sm font-medium text-primary">
-                  {space.price}
-                </p>
-                <h3 className="font-display text-xl font-bold text-dark">
-                  {space.title}
-                </h3>
-                <p className="font-body mt-2 text-sm leading-relaxed text-dark/70">
-                  {space.description}
-                </p>
+
+              <div className="flex flex-col justify-between bg-white p-6 lg:p-8">
+                <div>
+                  <h3 className="font-display text-xl font-bold text-dark lg:text-2xl">
+                    {space.title}
+                  </h3>
+                  <p className="font-display mt-1 text-sm font-medium text-primary">
+                    {space.price}
+                  </p>
+                  <p className="font-body mt-3 text-[15px] leading-relaxed text-dark/70">
+                    {space.description}
+                  </p>
+                </div>
+                <a
+                  href="#contact"
+                  className="font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
+                >
+                  Learn more <span aria-hidden>→</span>
+                </a>
               </div>
             </article>
           ))}
