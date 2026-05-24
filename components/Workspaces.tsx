@@ -64,20 +64,20 @@ export default function Workspaces() {
   }, []);
 
   return (
-    <section id="workspaces" className="bg-primary px-6 py-14 lg:px-10 lg:py-20 xl:px-12">
+    <section id="workspaces" className="bg-primary px-6 py-10 lg:px-10 lg:py-14 xl:px-12">
       <div className="mx-auto max-w-site">
         <h2 className="font-display text-4xl font-bold text-cream md:text-5xl lg:text-6xl">
           memberships for{" "}
           <span ref={typedRef} className="text-cream [&_.typed-cursor]:text-cream" />
         </h2>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:gap-8">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:gap-6">
           {workspaces.map((space) => (
             <article
               key={space.title}
-              className="grid min-h-[220px] grid-cols-1 overflow-hidden bg-white sm:min-h-[240px] sm:grid-cols-2 lg:min-h-[280px]"
+              className="grid min-h-[160px] grid-cols-1 overflow-hidden bg-white sm:min-h-[170px] sm:grid-cols-2 lg:min-h-[180px]"
             >
-              <div className="relative min-h-[180px] sm:min-h-0">
+              <div className="relative min-h-[120px] sm:min-h-0">
                 <Image
                   src={space.image}
                   alt={space.title}
@@ -87,21 +87,21 @@ export default function Workspaces() {
                 />
               </div>
 
-              <div className="flex flex-col justify-between bg-white p-6 lg:p-8">
+              <div className="flex flex-col justify-between bg-white p-4 lg:p-5">
                 <div>
-                  <h3 className="font-display text-xl font-bold text-dark lg:text-2xl">
+                  <h3 className="font-display text-lg font-bold text-dark lg:text-xl">
                     {space.title}
                   </h3>
-                  <p className="font-display mt-1 text-sm font-medium text-primary">
+                  <p className="font-display mt-0.5 text-sm font-medium text-primary">
                     {space.price}
                   </p>
-                  <p className="font-body mt-3 text-[15px] leading-relaxed text-dark/70">
+                  <p className="font-body mt-2 text-[15px] leading-snug text-dark/70">
                     {space.description}
                   </p>
                 </div>
                 <a
                   href="#contact"
-                  className="font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
+                  className="font-body mt-3 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
                 >
                   Learn more <span aria-hidden>→</span>
                 </a>

@@ -14,9 +14,7 @@ export async function submitContact(
   const name = (formData.get("name") as string)?.trim();
   const company = (formData.get("company") as string)?.trim();
   const email = (formData.get("email") as string)?.trim();
-  const phone = (formData.get("phone") as string)?.trim();
   const interests = (formData.get("interests") as string)?.trim();
-  const message = (formData.get("message") as string)?.trim();
 
   if (!name || !email) {
     return { success: false, error: "Please add your name and email." };
@@ -50,9 +48,7 @@ export async function submitContact(
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>Company / team:</strong> ${company ? escapeHtml(company) : "—"}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Phone:</strong> ${phone ? escapeHtml(phone) : "—"}</p>
       <p><strong>Interested in:</strong> ${escapeHtml(interests)}</p>
-      <p><strong>Working on:</strong> ${message ? escapeHtml(message) : "—"}</p>
     `,
   });
 
