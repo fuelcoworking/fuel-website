@@ -11,12 +11,13 @@ export default function Hero() {
     if (!typedRef.current) return;
 
     const typed = new Typed(typedRef.current, {
-      strings: ["spokane", "local", "community", "neighbourhood"],
+      strings: ["workspace", "office", "studio", "community", "hub"],
       typeSpeed: 55,
       backSpeed: 35,
       backDelay: 2200,
       loop: true,
-      showCursor: false,
+      showCursor: true,
+      cursorChar: "_",
       smartBackspace: true,
     });
 
@@ -35,17 +36,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/25" aria-hidden />
 
       <div className="absolute inset-0 z-10 mx-auto flex h-full max-w-site flex-col justify-between px-6 pb-8 pt-20 lg:px-10 lg:pb-10 xl:px-12">
-        <div>
-          <h1 className="max-w-[11ch] font-display text-[clamp(2.75rem,9vw,7.25rem)] font-bold uppercase leading-[0.9] tracking-tight text-white">
+        <h1 className="max-w-2xl font-display text-[clamp(2.25rem,6.5vw,5.25rem)] font-normal lowercase leading-[1.12] tracking-normal text-white">
+          <span className="block">
             Your{" "}
-            <span ref={typedRef} className="text-primary" />
-            <br />
-            workspace
-          </h1>
-          <p className="font-body mt-5 max-w-sm text-base font-normal text-white md:text-lg">
-            Work, commUNITY, and connection
-          </p>
-        </div>
+            <span ref={typedRef} className="text-primary [&_.typed-cursor]:text-white" />
+          </span>
+          <span className="block">in spokane</span>
+        </h1>
 
         <a
           href="#contact"
