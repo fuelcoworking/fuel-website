@@ -18,7 +18,7 @@ const interestOptions = [
 ];
 
 const inlineInputClass =
-  "font-body inline-block min-w-[10rem] max-w-full border-0 border-b border-dark/25 bg-transparent px-1 py-0.5 text-dark outline-none transition-colors placeholder:text-dark/35 focus:border-primary sm:min-w-[14rem]";
+  "font-body border-0 border-b border-dark/20 bg-transparent px-0 py-1 text-dark outline-none transition-colors placeholder:text-dark/30 focus:border-primary";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -27,7 +27,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="font-display mt-10 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
+      className="font-display mt-12 inline-flex items-center gap-2 rounded-lg bg-primary px-7 py-3.5 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
     >
       {pending ? "Sending…" : "Send my request"}
       {!pending && <span aria-hidden>→</span>}
@@ -61,10 +61,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-cream px-6 py-10 lg:px-10 xl:px-12">
-      <div className="mx-auto max-w-site">
-        <div className="max-w-3xl">
-          <h2 className="font-display text-4xl font-bold text-dark md:text-5xl">
+    <section id="contact" className="bg-cream px-6 py-16 lg:px-10 lg:py-24 xl:px-12">
+      <div className="mx-auto flex max-w-site justify-center">
+        <div className="w-full max-w-4xl">
+          <h2 className="font-display text-4xl font-bold text-dark md:text-5xl lg:text-[3.25rem] lg:leading-tight">
             Let&apos;s fuel your next move
             <span className="text-primary">.</span>
           </h2>
@@ -72,24 +72,24 @@ export default function Contact() {
           {state.success ? (
             <p
               role="status"
-              className="font-body mt-8 text-xl leading-relaxed text-dark/80"
+              className="font-body mt-10 text-xl leading-relaxed text-dark/80"
             >
               Thanks for reaching out — we&apos;ll be in touch soon. Your next idea
               takes off from here.
             </p>
           ) : (
-            <form action={handleSubmit} className="mt-8">
+            <form action={handleSubmit} className="mt-10 lg:mt-12">
               {(state.error || interestError) && (
                 <p
                   role="alert"
-                  className="font-body mb-6 rounded-lg bg-primary/10 px-4 py-3 text-sm text-dark"
+                  className="font-body mb-8 rounded-lg bg-primary/10 px-4 py-3 text-sm text-dark"
                 >
                   {interestError ?? state.error}
                 </p>
               )}
 
-              <div className="space-y-8">
-                <p className="font-body text-xl leading-relaxed text-dark md:text-2xl md:leading-relaxed">
+              <div className="space-y-10 lg:space-y-12">
+                <p className="font-body text-xl leading-[1.75] text-dark md:text-[1.65rem] md:leading-[1.8]">
                   My name is{" "}
                   <input
                     id="name"
@@ -97,7 +97,7 @@ export default function Contact() {
                     type="text"
                     required
                     placeholder="first & last name"
-                    className={inlineInputClass}
+                    className={`${inlineInputClass} inline-block min-w-[14rem] w-[42%] max-w-md sm:min-w-[18rem] sm:w-[22rem] lg:min-w-[22rem] lg:w-[26rem]`}
                   />{" "}
                   and I&apos;m building with{" "}
                   <input
@@ -105,17 +105,17 @@ export default function Contact() {
                     name="company"
                     type="text"
                     placeholder="company or solo"
-                    className={inlineInputClass}
+                    className={`${inlineInputClass} inline-block min-w-[14rem] w-[42%] max-w-md sm:min-w-[18rem] sm:w-[22rem] lg:min-w-[22rem] lg:w-[26rem]`}
                   />
                   .
                 </p>
 
                 <div>
-                  <p className="font-body text-xl leading-relaxed text-dark md:text-2xl md:leading-relaxed">
+                  <p className="font-body text-xl leading-[1.75] text-dark md:text-[1.65rem] md:leading-[1.8]">
                     I want to join FUEL for{" "}
-                    <span className="text-dark/60">(pick at least one)</span>
+                    <span className="text-dark/55">(pick at least one)</span>
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-3">
+                  <div className="mt-5 flex flex-wrap gap-3">
                     {interestOptions.map((option) => {
                       const selected = interests.includes(option);
                       return (
@@ -123,10 +123,10 @@ export default function Contact() {
                           key={option}
                           type="button"
                           onClick={() => toggleInterest(option)}
-                          className={`font-body rounded-full border px-4 py-2 text-[15px] transition-colors ${
+                          className={`font-body rounded-md border px-5 py-2.5 text-[15px] transition-colors ${
                             selected
                               ? "border-primary bg-primary/10 text-dark"
-                              : "border-dark/20 bg-white/60 text-dark hover:border-dark/40"
+                              : "border-dark/15 bg-white/80 text-dark hover:border-dark/30"
                           }`}
                         >
                           {option}
@@ -136,7 +136,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <p className="font-body text-xl leading-relaxed text-dark md:text-2xl md:leading-relaxed">
+                <p className="font-body text-xl leading-[1.75] text-dark md:text-[1.65rem] md:leading-[1.8]">
                   You can reach me at{" "}
                   <input
                     id="email"
@@ -144,31 +144,31 @@ export default function Contact() {
                     type="email"
                     required
                     placeholder="email address"
-                    className={inlineInputClass}
+                    className={`${inlineInputClass} inline-block min-w-[16rem] w-[min(100%,36rem)] sm:min-w-[24rem] sm:w-[32rem] lg:min-w-[28rem] lg:w-[36rem]`}
                   />
                   .
                 </p>
 
-                <p className="font-body text-xl leading-relaxed text-dark md:text-2xl md:leading-relaxed">
+                <p className="font-body text-xl leading-[1.75] text-dark md:text-[1.65rem] md:leading-[1.8]">
                   Or call me at{" "}
                   <input
                     id="phone"
                     name="phone"
                     type="tel"
                     placeholder="phone number (optional)"
-                    className={inlineInputClass}
+                    className={`${inlineInputClass} inline-block min-w-[16rem] w-[min(100%,36rem)] sm:min-w-[24rem] sm:w-[32rem] lg:min-w-[28rem] lg:w-[36rem]`}
                   />
                   .
                 </p>
 
-                <p className="font-body text-xl leading-relaxed text-dark md:text-2xl md:leading-relaxed">
+                <p className="font-body text-xl leading-[1.75] text-dark md:text-[1.65rem] md:leading-[1.8]">
                   Here&apos;s what I&apos;m working on:{" "}
                   <input
                     id="message"
                     name="message"
                     type="text"
                     placeholder="your project, team, or goals"
-                    className={`${inlineInputClass} min-w-[16rem] sm:min-w-[20rem]`}
+                    className={`${inlineInputClass} inline-block min-w-[16rem] w-[min(100%,36rem)] sm:min-w-[24rem] sm:w-[32rem] lg:min-w-[28rem] lg:w-[36rem]`}
                   />
                   .
                 </p>
