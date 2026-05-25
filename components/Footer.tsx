@@ -1,9 +1,6 @@
 import Link from "next/link";
-import {
-  footerNavLinks,
-  legalLinks,
-  FooterNavButton,
-} from "@/lib/site-links";
+import { footerNavLinks, legalLinks } from "@/lib/site-links";
+import { FooterNavButton } from "@/components/FooterNavButton";
 
 function InstagramIcon() {
   return (
