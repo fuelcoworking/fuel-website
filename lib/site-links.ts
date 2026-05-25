@@ -12,7 +12,11 @@ export const footerNavColumnOne: FooterLink[] = [
 
 export const footerNavColumnTwo: FooterLink[] = [
   { href: "/#contact", label: "Contact" },
-  { href: "https://linkedin.com", label: "LinkedIn", external: true },
+  {
+    href: "https://www.linkedin.com/company/fuel-coworking/posts/?feedView=all",
+    label: "LinkedIn",
+    external: true,
+  },
 ];
 
 export const legalLinks: FooterLink[] = [

@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const PLACEHOLDER_IMAGE = "/images/placeholder.png";
+
 const events = [
   {
     name: "Lorem ipsum dolor",
@@ -7,7 +9,6 @@ const events = [
     type: "Lorem ipsum",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
-    image: "/images/workspaces/hot-desk.jpg",
   },
   {
     name: "Consectetur adipiscing",
@@ -15,7 +16,6 @@ const events = [
     type: "Dolor sit",
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-    image: "/images/workspaces/dedicated-desk.jpg",
   },
   {
     name: "Eiusmod tempor incididunt",
@@ -23,7 +23,6 @@ const events = [
     type: "Magna aliqua",
     description:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
-    image: "/images/workspaces/private-office.jpg",
   },
   {
     name: "Pariatur excepteur sint",
@@ -31,7 +30,6 @@ const events = [
     type: "Non proident",
     description:
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
-    image: "/images/workspaces/meeting-room.jpg",
   },
   {
     name: "Sunt in culpa qui",
@@ -39,7 +37,6 @@ const events = [
     type: "Mollit anim",
     description:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-    image: "/images/hero.jpg",
   },
   {
     name: "Natus error sit",
@@ -47,7 +44,6 @@ const events = [
     type: "Accusantium",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
-    image: "/images/mission.png",
   },
 ];
 
@@ -70,8 +66,8 @@ export default function Events() {
                 >
                   <div className="relative h-44 w-full sm:h-48">
                     <Image
-                      src={event.image}
-                      alt={event.name}
+                      src={PLACEHOLDER_IMAGE}
+                      alt=""
                       fill
                       className="object-cover"
                       sizes="320px"

@@ -1,33 +1,31 @@
 import Image from "next/image";
 
+const PLACEHOLDER_IMAGE = "/images/placeholder.png";
+
 const workspaces = [
   {
     title: "Lorem ipsum dolor",
     price: "Sit amet consectetur",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/images/workspaces/hot-desk.jpg",
   },
   {
     title: "Adipiscing elit sed",
     price: "Eiusmod tempor",
     description:
       "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: "/images/workspaces/dedicated-desk.jpg",
   },
   {
     title: "Duis aute irure",
     price: "Dolor in reprehenderit",
     description:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    image: "/images/workspaces/private-office.jpg",
   },
   {
     title: "Excepteur sint occaecat",
     price: "Cupidatat non proident",
     description:
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    image: "/images/workspaces/meeting-room.jpg",
   },
 ];
 
@@ -47,8 +45,8 @@ export default function Workspaces() {
             >
               <div className="relative min-h-[160px] sm:min-h-0">
                 <Image
-                  src={space.image}
-                  alt={space.title}
+                  src={PLACEHOLDER_IMAGE}
+                  alt=""
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 22vw"
