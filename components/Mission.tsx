@@ -50,7 +50,7 @@ export default function Mission() {
   }, []);
 
   return (
-    <section id="mission" className="relative min-h-[420px]">
+    <section id="mission" className="relative min-h-[520px] lg:min-h-[580px]">
       <Image
         src="/images/mission.png"
         alt="FUEL coworking community collaborating"
@@ -59,7 +59,7 @@ export default function Mission() {
       />
       <div className="absolute inset-0 bg-dark/60" aria-hidden />
 
-      <div className="relative z-10 mx-auto flex min-h-[420px] max-w-site flex-col justify-center px-6 py-10 lg:px-10 xl:px-12">
+      <div className="relative z-10 mx-auto flex min-h-[520px] max-w-site flex-col justify-center px-6 py-16 lg:min-h-[580px] lg:px-10 lg:py-20 xl:px-12">
         <div className="max-w-3xl">
           <h2 className="font-display text-4xl font-bold text-cream md:text-5xl">
             fuel your next big{" "}
@@ -75,7 +75,7 @@ export default function Mission() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-14">
           {pillars.map((pillar) => (
             <article key={pillar.title}>
               <h3 className="font-display text-lg font-bold text-cream">

@@ -25,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[68vh] min-h-[480px] md:h-[72vh] md:min-h-[560px] lg:min-h-[620px]">
+    <section className="relative h-[76vh] min-h-[520px] md:h-[80vh] md:min-h-[600px] lg:min-h-[680px]">
       <Image
         src="/images/hero.jpg"
         alt="FUEL coworking — white letters on a wooden table"

@@ -1,16 +1,3 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import Typed from "typed.js";
-
-const eventTypes = [
-  "workshop",
-  "meetup",
-  "founder circle",
-  "collab session",
-  "community night",
-];
-
 const events = [
   {
     name: "Founder Breakfast",
@@ -45,38 +32,20 @@ const events = [
 ];
 
 export default function Events() {
-  const typedRef = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    if (!typedRef.current) return;
-
-    const typed = new Typed(typedRef.current, {
-      strings: eventTypes,
-      typeSpeed: 60,
-      backSpeed: 40,
-      backDelay: 1500,
-      loop: true,
-      showCursor: false,
-      smartBackspace: true,
-    });
-
-    return () => typed.destroy();
-  }, []);
-
   return (
-    <section id="events" className="bg-cream px-6 py-10 lg:px-10 xl:px-12">
+    <section id="events" className="bg-cream px-6 py-16 lg:px-10 lg:py-24 xl:px-12">
       <div className="mx-auto max-w-site">
-        <h2 className="font-display text-4xl font-bold text-dark md:text-5xl">
-          join us for a{" "}
-          <span ref={typedRef} className="text-primary" />
+        <h2 className="font-display text-4xl font-bold text-dark md:text-5xl lg:text-6xl">
+          join us for an{" "}
+          <span className="bg-primary px-1.5 py-0.5 text-cream">event</span>
         </h2>
 
-        <div className="mt-8 -mx-6 overflow-x-auto px-6 pb-2 snap-x snap-mandatory scroll-smooth">
-          <div className="flex w-max gap-4">
+        <div className="mt-12 -mx-6 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scroll-smooth lg:mt-14">
+          <div className="flex w-max gap-5">
             {events.map((event) => (
               <article
                 key={event.name}
-                className="w-72 shrink-0 snap-start border border-dark/10 bg-white p-5"
+                className="w-80 shrink-0 snap-start border border-dark/10 bg-white p-6 min-h-[200px]"
               >
                 <p className="font-display text-xs font-medium uppercase tracking-wide text-primary">
                   {event.type}
