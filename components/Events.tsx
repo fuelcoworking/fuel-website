@@ -93,9 +93,15 @@ export default function Events() {
                     </div>
                     <a
                       href="#contact"
-                      className="font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
+                      className="group font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
                     >
-                      Learn more <span aria-hidden>→</span>
+                      Learn more{" "}
+                      <span
+                        aria-hidden
+                        className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1"
+                      >
+                        →
+                      </span>
                     </a>
                   </div>
                 </article>

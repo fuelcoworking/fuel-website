@@ -63,15 +63,21 @@ export default function Workspaces() {
                   <p className="font-display mt-1 text-sm font-medium text-primary">
                     {space.price}
                   </p>
-                  <p className="font-body mt-3 text-[15px] leading-relaxed text-dark/70">
+                  <p className="font-body mt-3 text-[15px] font-bold leading-relaxed text-dark/70">
                     {space.description}
                   </p>
                 </div>
                 <a
                   href="#contact"
-                  className="font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
+                  className="group font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
                 >
-                  Learn more <span aria-hidden>→</span>
+                  Learn more{" "}
+                  <span
+                    aria-hidden
+                    className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
                 </a>
               </div>
             </article>

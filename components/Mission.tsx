@@ -6,29 +6,6 @@ import Typed from "typed.js";
 
 const nextBigWords = ["idea", "business", "venture", "project", "breakthrough"];
 
-const pillars = [
-  {
-    title: "Collaborate",
-    description:
-      "Work side by side with founders, creatives, and business leaders. Collaboration is the spark that drives everything forward.",
-  },
-  {
-    title: "Innovate",
-    description:
-      "Turn bold ideas into reality with resources, mentorship, and a community that thrives on experimentation — action over inspiration.",
-  },
-  {
-    title: "Grow",
-    description:
-      "Scale your business and yourself. FUEL gives you the runway, capital connections, and confidence to level up.",
-  },
-  {
-    title: "commUNITY",
-    description:
-      "Belonging isn't an amenity — it's core to who we are. UNITY is built into everything we do.",
-  },
-];
-
 export default function Mission() {
   const typedRef = useRef<HTMLSpanElement>(null);
 
@@ -59,33 +36,26 @@ export default function Mission() {
       />
       <div className="absolute inset-0 bg-dark/60" aria-hidden />
 
-      <div className="relative z-10 mx-auto flex min-h-[520px] max-w-site flex-col justify-center px-6 py-16 lg:min-h-[580px] lg:px-10 lg:py-20 xl:px-12">
-        <div className="max-w-3xl">
-          <h2 className="font-display text-4xl font-bold text-cream md:text-5xl">
+      <div className="relative z-10 mx-auto flex min-h-[520px] max-w-site flex-col items-center justify-center px-6 py-16 text-center lg:min-h-[580px] lg:px-10 lg:py-20 xl:px-12">
+        <div className="max-w-2xl">
+          <h2 className="font-display text-4xl font-bold text-cream md:text-5xl lg:text-6xl">
             fuel your next big{" "}
             <span ref={typedRef} className="text-amber [&_.typed-cursor]:text-cream" />
           </h2>
-          <p className="font-display mt-3 text-lg font-normal text-amber">
-            Big ideas don&apos;t happen in isolation.
+          <p className="font-display mt-4 text-xl font-bold text-cream md:text-2xl">
+            Work, community, and connection in Spokane.
           </p>
-          <p className="font-body mt-4 text-lg leading-relaxed text-cream/90">
-            FUEL is a community-first coworking space in Spokane — a launchpad for
-            founders, freelancers, and forward-thinkers ready to ignite momentum and
-            take their next idea off the ground.
+          <p className="font-body mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg">
+            FUEL is a community-first coworking space — a launchpad for founders,
+            freelancers, and forward-thinkers ready to ignite momentum and take their
+            next idea off the ground.
           </p>
-        </div>
-
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:mt-14">
-          {pillars.map((pillar) => (
-            <article key={pillar.title}>
-              <h3 className="font-display text-lg font-bold text-cream">
-                {pillar.title}
-              </h3>
-              <p className="font-body mt-2 text-sm leading-relaxed text-cream/80">
-                {pillar.description}
-              </p>
-            </article>
-          ))}
+          <a
+            href="#contact"
+            className="font-display mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-[15px] font-bold text-dark transition-opacity hover:opacity-90"
+          >
+            Find out more
+          </a>
         </div>
       </div>
     </section>

@@ -24,7 +24,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="font-display mt-10 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
+      className="font-display mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
     >
       {pending ? "Sending…" : "Submit"}
       {!pending && <span aria-hidden>→</span>}
@@ -75,7 +75,7 @@ export default function Contact() {
               takes off from here.
             </p>
           ) : (
-            <form action={handleSubmit} className="mt-10 lg:mt-12">
+            <form action={handleSubmit} className="mt-8 lg:mt-10">
               {(state.error || interestError) && (
                 <p
                   role="alert"
@@ -85,7 +85,7 @@ export default function Contact() {
                 </p>
               )}
 
-              <div className="space-y-10 lg:space-y-12">
+              <div className="space-y-7 lg:space-y-8">
                 <p className={formParagraphClass}>
                   My name is{" "}
                   <input
@@ -112,7 +112,7 @@ export default function Contact() {
                     I want to join FUEL for{" "}
                     <span className="text-dark/55">(pick at least one)</span>
                   </p>
-                  <div className="mt-5 flex flex-wrap gap-3">
+                  <div className="mt-4 flex flex-wrap gap-3">
                     {interestOptions.map((option) => {
                       const selected = interests.includes(option);
                       return (
