@@ -59,8 +59,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-cream px-6 py-16 lg:px-10 lg:py-20 xl:px-12">
-      <div className="mx-auto max-w-site">
-        <div className="max-w-2xl">
+      <div className="mx-auto flex max-w-site justify-center">
+        <div className="w-full max-w-2xl">
           <h2 className="font-display text-4xl font-bold text-dark md:text-5xl lg:text-[3.25rem] lg:leading-tight">
             Let&apos;s fuel your next move
             <span className="text-primary">.</span>
