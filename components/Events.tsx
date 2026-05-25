@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { EVENTBRITE_URL } from "@/lib/site-links";
 
 const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 
@@ -88,7 +89,9 @@ export default function Events() {
                       </p>
                     </div>
                     <a
-                      href="#contact"
+                      href={EVENTBRITE_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
                     >
                       Learn more{" "}

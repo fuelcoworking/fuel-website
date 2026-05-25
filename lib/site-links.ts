@@ -4,9 +4,18 @@ type FooterLink = {
   external?: boolean;
 };
 
+export const EVENTBRITE_URL = "https://www.eventbrite.com/o/110692675491";
+export const INSTAGRAM_URL = "https://www.instagram.com/fuel.coworking/";
+
+export const headerNavLinks: FooterLink[] = [
+  { href: "/#workspaces", label: "Memberships" },
+  { href: EVENTBRITE_URL, label: "Events", external: true },
+  { href: "/mission", label: "Our mission" },
+];
+
 export const footerNavColumnOne: FooterLink[] = [
   { href: "/#workspaces", label: "Memberships" },
-  { href: "/#events", label: "Events" },
+  { href: EVENTBRITE_URL, label: "Events", external: true },
   { href: "/mission", label: "Our mission" },
 ];
 
@@ -15,6 +24,11 @@ export const footerNavColumnTwo: FooterLink[] = [
   {
     href: "https://www.linkedin.com/company/fuel-coworking/posts/?feedView=all",
     label: "LinkedIn",
+    external: true,
+  },
+  {
+    href: INSTAGRAM_URL,
+    label: "Instagram",
     external: true,
   },
 ];

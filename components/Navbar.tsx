@@ -2,12 +2,41 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { headerNavLinks } from "@/lib/site-links";
 
-const navLinks = [
-  { href: "/#workspaces", label: "Memberships" },
-  { href: "/#events", label: "Events" },
-  { href: "/mission", label: "Our mission" },
-];
+function NavLink({
+  href,
+  label,
+  external,
+  onClick,
+  className,
+}: {
+  href: string;
+  label: string;
+  external?: boolean;
+  onClick?: () => void;
+  className: string;
+}) {
+  if (external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        onClick={onClick}
+      >
+        {label}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} className={className} onClick={onClick}>
+      {label}
+    </Link>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,14 +53,14 @@ export default function Navbar() {
 
         <div className="hidden items-center xl:flex">
           <ul className="flex items-center gap-7">
-            {navLinks.map((link) => (
+            {headerNavLinks.map((link) => (
               <li key={link.label}>
-                <Link
+                <NavLink
                   href={link.href}
+                  label={link.label}
+                  external={link.external}
                   className="font-body text-[15px] font-normal text-dark transition-opacity hover:opacity-70"
-                >
-                  {link.label}
-                </Link>
+                />
               </li>
             ))}
           </ul>
@@ -98,15 +127,15 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-neutral-200 bg-white xl:hidden">
           <ul className="px-6 py-4">
-            {navLinks.map((link) => (
+            {headerNavLinks.map((link) => (
               <li key={link.label}>
-                <Link
+                <NavLink
                   href={link.href}
-                  className="font-body block py-3 text-[15px] text-dark"
+                  label={link.label}
+                  external={link.external}
                   onClick={() => setOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                  className="font-body block py-3 text-[15px] text-dark"
+                />
               </li>
             ))}
             <li className="border-t border-neutral-200 pt-3">
