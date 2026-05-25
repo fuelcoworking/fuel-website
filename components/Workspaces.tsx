@@ -2,31 +2,31 @@ import Image from "next/image";
 
 const workspaces = [
   {
-    title: "Basic",
-    price: "$100/mo",
+    title: "Lorem ipsum dolor",
+    price: "Sit amet consectetur",
     description:
-      "Hotdesk access without reservation. Your entry point to the FUEL community.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/images/workspaces/hot-desk.jpg",
   },
   {
-    title: "Hot Desk",
-    price: "$200/mo",
+    title: "Adipiscing elit sed",
+    price: "Eiusmod tempor",
     description:
-      "Pick any open desk daily. Fast internet, conference room credits, and unlimited coffee.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: "/images/workspaces/dedicated-desk.jpg",
   },
   {
-    title: "Permanent Desk",
-    price: "$400/mo",
+    title: "Duis aute irure",
+    price: "Dolor in reprehenderit",
     description:
-      "Your own dedicated desk, always. Full amenities plus full community access.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     image: "/images/workspaces/private-office.jpg",
   },
   {
-    title: "Private Office",
-    price: "$500/mo",
+    title: "Excepteur sint occaecat",
+    price: "Cupidatat non proident",
     description:
-      "Private office on floor 1 or 2. Best for teams or anyone who needs focused space.",
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     image: "/images/workspaces/meeting-room.jpg",
   },
 ];

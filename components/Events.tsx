@@ -2,51 +2,51 @@ import Image from "next/image";
 
 const events = [
   {
-    name: "Founder Breakfast",
-    date: "Every Tuesday · 8:00 AM",
-    type: "Collaborate",
+    name: "Lorem ipsum dolor",
+    date: "Sit amet · 8:00 AM",
+    type: "Lorem ipsum",
     description:
-      "Start your week with founders and operators over coffee and conversation.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
     image: "/images/workspaces/hot-desk.jpg",
   },
   {
-    name: "Coworking 101",
-    date: "Mar 12, 2026 · 12:00 PM",
-    type: "Innovate",
+    name: "Consectetur adipiscing",
+    date: "Elit sed · 12:00 PM",
+    type: "Dolor sit",
     description:
-      "A guided intro to FUEL — tour the space, meet members, and find your fit.",
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     image: "/images/workspaces/dedicated-desk.jpg",
   },
   {
-    name: "Demo Night",
-    date: "Mar 20, 2026 · 6:00 PM",
-    type: "Grow",
+    name: "Eiusmod tempor incididunt",
+    date: "Ut labore · 6:00 PM",
+    type: "Magna aliqua",
     description:
-      "Local builders share what they are shipping. Feedback, connections, and pizza.",
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
     image: "/images/workspaces/private-office.jpg",
   },
   {
-    name: "Spokane Creators Meetup",
-    date: "Apr 3, 2026 · 5:30 PM",
-    type: "commUNITY",
+    name: "Pariatur excepteur sint",
+    date: "Occaecat cupidatat · 5:30 PM",
+    type: "Non proident",
     description:
-      "Designers, writers, and makers connect for show-and-tell and collaboration.",
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
     image: "/images/workspaces/meeting-room.jpg",
   },
   {
-    name: "Pitch & Coffee",
-    date: "Apr 18, 2026 · 9:00 AM",
-    type: "Collaborate",
+    name: "Sunt in culpa qui",
+    date: "Officia deserunt · 9:00 AM",
+    type: "Mollit anim",
     description:
-      "Practice your pitch in a supportive room before investors and partners.",
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: "/images/hero.jpg",
   },
   {
-    name: "Member Social",
-    date: "May 1, 2026 · 6:00 PM",
-    type: "commUNITY",
+    name: "Natus error sit",
+    date: "Voluptatem · 6:00 PM",
+    type: "Accusantium",
     description:
-      "An after-hours hang for members — no agenda, just community and good energy.",
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
     image: "/images/mission.png",
   },
 ];
