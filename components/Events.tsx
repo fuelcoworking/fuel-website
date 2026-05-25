@@ -60,17 +60,8 @@ export default function Events() {
           <span className="bg-primary px-1.5 py-0.5 text-cream">event</span>
         </h2>
 
-        <div className="relative mt-12 lg:mt-14">
-          <div
-            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-cream via-cream/80 to-transparent sm:w-20"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-cream via-cream/80 to-transparent sm:w-20"
-            aria-hidden
-          />
-
-          <div className="-mx-6 overflow-x-auto px-6 pb-2 scrollbar-hide snap-x snap-mandatory scroll-smooth">
+        <div className="relative mt-12 -mx-6 overflow-hidden lg:mx-0 lg:mt-14">
+          <div className="events-scroll-mask overflow-x-auto px-6 pb-2 scrollbar-hide snap-x snap-mandatory scroll-smooth">
             <div className="flex w-max gap-5">
               {events.map((event) => (
                 <article

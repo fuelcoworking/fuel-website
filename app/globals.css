@@ -57,6 +57,42 @@
   display: none;
 }
 
+.events-scroll-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 2.5rem,
+    #000 calc(100% - 2.5rem),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 2.5rem,
+    #000 calc(100% - 2.5rem),
+    transparent
+  );
+}
+
+@media (min-width: 640px) {
+  .events-scroll-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 4rem,
+      #000 calc(100% - 4rem),
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 4rem,
+      #000 calc(100% - 4rem),
+      transparent
+    );
+  }
+}
+
 .typed-cursor {
   animation: typedBlink 0.9s infinite;
 }
