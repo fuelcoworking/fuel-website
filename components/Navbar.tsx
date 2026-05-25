@@ -21,12 +21,9 @@ function ChevronDown() {
 }
 
 const navLinks = [
-  { href: "#workspaces", label: "Locations", dropdown: true },
-  { href: "#events", label: "Meetings & Events", dropdown: true },
   { href: "#workspaces", label: "Memberships", dropdown: true },
   { href: "#mission", label: "About", dropdown: false },
   { href: "#events", label: "Stories", dropdown: false },
-  { href: "#contact", label: "Landlords", dropdown: false },
 ];
 
 export default function Navbar() {
