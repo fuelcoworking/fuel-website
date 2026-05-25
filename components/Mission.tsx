@@ -44,7 +44,7 @@ export default function Mission() {
           </h2>
           <p className="font-body mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg">
             Our mission is to build a community-first home in Spokane where
-            entrepreneurs, creatives, and neighbourhood builders collaborate,
+            entrepreneurs, creatives, and neighborhood builders collaborate,
             innovate, and grow together — strengthening local connection and giving
             bold ideas room to take off.
           </p>

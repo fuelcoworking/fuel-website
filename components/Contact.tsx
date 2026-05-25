@@ -15,7 +15,7 @@ const inlineInputClass =
   "font-body border-0 border-b border-dark/20 bg-transparent px-0 py-0.5 text-[15px] text-dark outline-none transition-colors placeholder:text-dark/30 focus:border-primary md:text-base";
 
 const formParagraphClass =
-  "font-body text-[15px] leading-relaxed text-dark md:text-base";
+  "font-body text-[15px] leading-[1.65] text-dark md:text-base";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
@@ -24,7 +24,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="font-display mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
+      className="font-display mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
     >
       {pending ? "Sending…" : "Submit"}
       {!pending && <span aria-hidden>→</span>}
@@ -75,17 +75,17 @@ export default function Contact() {
               takes off from here.
             </p>
           ) : (
-            <form action={handleSubmit} className="mt-8 lg:mt-10">
+            <form action={handleSubmit} className="mt-6 lg:mt-8">
               {(state.error || interestError) && (
                 <p
                   role="alert"
-                  className="font-body mb-6 rounded-lg bg-primary/10 px-4 py-3 text-sm text-dark"
+                  className="font-body mb-5 rounded-lg bg-primary/10 px-4 py-3 text-sm text-dark"
                 >
                   {interestError ?? state.error}
                 </p>
               )}
 
-              <div className="space-y-7 lg:space-y-8">
+              <div className="space-y-5">
                 <p className={formParagraphClass}>
                   My name is{" "}
                   <input
@@ -107,12 +107,12 @@ export default function Contact() {
                   .
                 </p>
 
-                <div>
+                <div className="space-y-3">
                   <p className={formParagraphClass}>
                     I want to join FUEL for{" "}
                     <span className="text-dark/55">(pick at least one)</span>
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2">
                     {interestOptions.map((option) => {
                       const selected = interests.includes(option);
                       return (
