@@ -24,7 +24,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="font-display mt-10 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
+      className="font-display mt-12 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-[15px] font-normal text-cream transition-opacity hover:opacity-90 disabled:opacity-60"
     >
       {pending ? "Sending…" : "Submit"}
       {!pending && <span aria-hidden>→</span>}
@@ -58,8 +58,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-cream px-6 py-16 lg:px-10 lg:py-20 xl:px-12">
-      <div className="mx-auto flex max-w-site justify-center">
+    <section
+      id="contact"
+      className="flex min-h-screen items-center bg-cream px-6 py-24 lg:px-10 lg:py-32 xl:px-12"
+    >
+      <div className="mx-auto flex w-full max-w-site justify-center">
         <div className="w-full max-w-2xl">
           <h2 className="font-display text-4xl font-bold text-dark md:text-5xl lg:text-[3.25rem] lg:leading-tight">
             Let&apos;s fuel your next move
@@ -69,13 +72,13 @@ export default function Contact() {
           {state.success ? (
             <p
               role="status"
-              className="font-body mt-8 text-[15px] leading-relaxed text-dark/80 md:text-base"
+              className="font-body mt-12 text-[15px] leading-relaxed text-dark/80 md:text-base"
             >
               Thanks for reaching out — we&apos;ll be in touch soon. Your next idea
               takes off from here.
             </p>
           ) : (
-            <form action={handleSubmit} className="mt-10 lg:mt-12">
+            <form action={handleSubmit} className="mt-12 lg:mt-14">
               {(state.error || interestError) && (
                 <p
                   role="alert"
@@ -85,7 +88,7 @@ export default function Contact() {
                 </p>
               )}
 
-              <div className="space-y-10 lg:space-y-12">
+              <div className="space-y-12 lg:space-y-14">
                 <p className={formParagraphClass}>
                   My name is{" "}
                   <input

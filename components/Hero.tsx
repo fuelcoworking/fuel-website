@@ -25,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[76vh] min-h-[520px] md:h-[80vh] md:min-h-[600px] lg:min-h-[680px]">
+    <section className="relative h-[calc(100svh-3.5rem)] min-h-[560px]">
       <Image
         src="/images/hero.jpg"
         alt="FUEL coworking — white letters on a wooden table"
@@ -35,7 +35,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black/25" aria-hidden />
 
-      <div className="absolute inset-0 z-10 mx-auto flex h-full max-w-site flex-col justify-between px-6 pb-8 pt-20 lg:px-10 lg:pb-10 xl:px-12">
+      <div className="absolute inset-0 z-10 mx-auto flex h-full max-w-site flex-col justify-between px-6 pb-12 pt-20 lg:px-10 lg:pb-14 lg:pt-20 xl:px-12">
         <h1 className="max-w-2xl font-display text-[clamp(2.25rem,6.5vw,5.25rem)] font-normal lowercase leading-[1.12] tracking-normal text-white">
           <span className="block">
             Your{" "}
