@@ -22,7 +22,7 @@ function ChevronDown() {
 
 const navLinks = [
   { href: "#workspaces", label: "Memberships", dropdown: true },
-  { href: "#mission", label: "About", dropdown: false },
+  { href: "/mission", label: "About", dropdown: false },
   { href: "#events", label: "Stories", dropdown: false },
 ];
 

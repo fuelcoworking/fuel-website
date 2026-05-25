@@ -43,18 +43,19 @@ export default function Mission() {
             <span ref={typedRef} className="text-amber [&_.typed-cursor]:text-cream" />
           </h2>
           <p className="font-display mt-4 text-xl font-bold text-cream md:text-2xl">
-            Work, community, and connection in Spokane.
+            Big ideas don&apos;t happen in isolation.
           </p>
           <p className="font-body mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg">
-            FUEL is a community-first coworking space — a launchpad for founders,
-            freelancers, and forward-thinkers ready to ignite momentum and take their
-            next idea off the ground.
+            Our mission is to build a community-first home in Spokane where
+            entrepreneurs, creatives, and neighbourhood builders collaborate,
+            innovate, and grow together — strengthening local connection and giving
+            bold ideas room to take off.
           </p>
           <a
-            href="#contact"
+            href="/mission"
             className="font-display mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-[15px] font-bold text-dark transition-opacity hover:opacity-90"
           >
-            Find out more
+            Our mission
           </a>
         </div>
       </div>
