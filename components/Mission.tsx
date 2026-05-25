@@ -42,9 +42,6 @@ export default function Mission() {
             fuel your next big{" "}
             <span ref={typedRef} className="text-amber [&_.typed-cursor]:text-cream" />
           </h2>
-          <p className="font-display mt-4 text-xl font-bold text-cream md:text-2xl">
-            Big ideas don&apos;t happen in isolation.
-          </p>
           <p className="font-body mx-auto mt-6 max-w-xl text-base leading-relaxed text-cream/90 md:text-lg">
             Our mission is to build a community-first home in Spokane where
             entrepreneurs, creatives, and neighbourhood builders collaborate,
