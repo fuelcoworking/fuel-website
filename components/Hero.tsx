@@ -46,7 +46,7 @@ export default function Hero() {
 
         <a
           href="#contact"
-          className="font-body w-fit rounded-full bg-white px-6 py-3 text-[15px] font-normal text-dark transition-opacity hover:opacity-90"
+          className="font-body w-fit rounded-full bg-white px-6 py-3 text-[15px] font-bold text-dark transition-opacity hover:opacity-90"
         >
           Try a free day
         </a>

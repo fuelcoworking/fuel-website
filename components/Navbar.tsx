@@ -66,7 +66,7 @@ export default function Navbar() {
             </a>
             <a
               href="#contact"
-              className="font-body rounded-full bg-dark px-4 py-2 text-[15px] font-normal text-white transition-opacity hover:opacity-85"
+              className="font-body rounded-full bg-dark px-4 py-2 text-[15px] font-bold text-white transition-opacity hover:opacity-85"
             >
               Try a free day
             </a>
@@ -76,7 +76,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3 xl:hidden">
           <a
             href="#contact"
-            className="font-body hidden rounded-full bg-dark px-4 py-2 text-sm font-normal text-white sm:inline-block"
+            className="font-body hidden rounded-full bg-dark px-4 py-2 text-sm font-bold text-white sm:inline-block"
           >
             Try a free day
           </a>
@@ -143,7 +143,7 @@ export default function Navbar() {
             <li>
               <a
                 href="#contact"
-                className="font-body mt-2 inline-block rounded-full bg-dark px-5 py-2.5 text-[15px] text-white"
+                className="font-body mt-2 inline-block rounded-full bg-dark px-5 py-2.5 text-[15px] font-bold text-white"
                 onClick={() => setOpen(false)}
               >
                 Try a free day
