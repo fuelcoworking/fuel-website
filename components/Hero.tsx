@@ -36,7 +36,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/25" aria-hidden />
 
       <div className="absolute inset-0 z-10 mx-auto flex h-full max-w-site flex-col justify-between px-6 pb-8 pt-20 lg:px-10 lg:pb-10 xl:px-12">
-        <h1 className="max-w-2xl font-display text-[clamp(2.25rem,6.5vw,5.25rem)] font-normal lowercase leading-[1.12] tracking-normal text-white">
+        <h1 className="max-w-3xl font-display text-[clamp(2.75rem,8vw,6.75rem)] font-normal lowercase leading-[1.1] tracking-normal text-white">
           <span className="block">
             Your{" "}
             <span ref={typedRef} className="text-primary [&_.typed-cursor]:text-white" />
