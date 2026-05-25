@@ -43,17 +43,17 @@ export default function Footer() {
   return (
     <footer className="bg-dark px-6 py-20 lg:px-10 lg:py-28 xl:px-12 xl:py-32">
       <div className="mx-auto max-w-site">
-        <div className="flex flex-col gap-14 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
+        <div className="flex flex-col gap-14 lg:flex-row lg:items-start lg:justify-between lg:gap-x-20 xl:gap-x-32">
           <Link
             href="/"
-            className="font-display block text-[clamp(4.5rem,18vw,11rem)] font-bold leading-[0.88] tracking-tight text-cream"
+            className="font-display block shrink-0 text-[clamp(4.5rem,18vw,11rem)] font-bold leading-[0.88] tracking-tight text-cream"
           >
             FUEL
             <br />
             Coworking
           </Link>
 
-          <nav className="grid grid-cols-2 gap-x-16 gap-y-5 sm:gap-x-24 lg:gap-x-28">
+          <nav className="grid shrink-0 grid-cols-2 gap-x-16 gap-y-5 sm:gap-x-24 lg:ml-12 lg:gap-x-28 lg:pl-8 xl:ml-20 xl:pl-12">
             <ul className="space-y-5 md:space-y-6">
               {footerNavColumnOne.map((link) => (
                 <li key={link.label}>
