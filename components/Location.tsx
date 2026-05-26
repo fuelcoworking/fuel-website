@@ -1,9 +1,21 @@
-import Image from "next/image";
-
-const PLACEHOLDER_IMAGE = "/images/placeholder.png";
+// FUEL Coworking — 809 W Main Ave, Suite 212, Spokane, WA
+const STREET_VIEW_LAT = 47.6587514;
+const STREET_VIEW_LNG = -117.4236874;
+const STREET_VIEW_HEADING = 210;
 
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=809+W+Main+Ave+Suite+212+Spokane+WA+99201";
+
+function getStreetViewEmbedUrl() {
+  const key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_KEY;
+
+  if (key) {
+    return `https://www.google.com/maps/embed/v1/streetview?key=${key}&location=${STREET_VIEW_LAT},${STREET_VIEW_LNG}&heading=${STREET_VIEW_HEADING}&pitch=0&fov=80`;
+  }
+
+  // Interactive Street View embed (no API key required)
+  return `https://maps.google.com/maps?layer=c&cbll=${STREET_VIEW_LAT},${STREET_VIEW_LNG}&cbp=11,${STREET_VIEW_HEADING},0,0,0&output=svembed`;
+}
 
 const details = [
   {
@@ -21,6 +33,8 @@ const details = [
 ];
 
 export default function Location() {
+  const streetViewSrc = getStreetViewEmbedUrl();
+
   return (
     <section id="location" className="bg-cream px-6 py-12 lg:px-10 lg:py-16 xl:px-12">
       <div className="mx-auto max-w-site">
@@ -57,17 +71,19 @@ export default function Location() {
             </a>
           </div>
 
-          <div className="relative min-h-[280px] overflow-hidden border border-dark/10 sm:min-h-[360px] lg:min-h-[420px]">
-            <Image
-              src={PLACEHOLDER_IMAGE}
-              alt="Map placeholder for FUEL Coworking in downtown Spokane"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 45vw"
-            />
-            <div className="absolute inset-0 bg-dark/20" aria-hidden />
-            <p className="font-display absolute bottom-4 left-4 text-sm font-bold text-cream md:text-base">
-              Downtown Spokane
+          <div className="flex flex-col">
+            <div className="relative min-h-[280px] overflow-hidden border border-dark/10 sm:min-h-[360px] lg:min-h-[420px]">
+              <iframe
+                title="Street View of FUEL Coworking at 809 W Main Ave, Spokane"
+                src={streetViewSrc}
+                className="absolute inset-0 h-full w-full"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <p className="font-body mt-3 text-xs text-dark/55">
+              Drag to pan · Use controls to explore the street view
             </p>
           </div>
         </div>
