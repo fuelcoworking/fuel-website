@@ -50,7 +50,10 @@ const events = [
 
 export default function Events() {
   return (
-    <section id="events" className="bg-cream px-6 py-16 lg:px-10 lg:py-24 xl:px-12">
+    <section
+      id="events"
+      className="bg-cream px-6 pb-16 pt-20 lg:px-10 lg:pb-24 lg:pt-28 xl:px-12"
+    >
       <div className="mx-auto max-w-site">
         <h2 className="font-display text-4xl font-bold text-dark md:text-5xl lg:text-6xl">
           join us for an{" "}
