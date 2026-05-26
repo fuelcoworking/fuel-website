@@ -58,9 +58,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-cream px-6 py-16 lg:px-10 lg:py-20 xl:px-12">
+    <section id="contact" className="bg-cream px-6 py-24 lg:px-10 lg:py-32 xl:px-12">
       <div className="mx-auto flex max-w-site justify-center">
-        <div className="w-full max-w-2xl">
+        <div className="w-full max-w-2xl text-center">
           <h2 className="font-display text-4xl font-bold text-dark md:text-5xl lg:text-[3.25rem] lg:leading-tight">
             Try FUEL today
             <span className="text-primary">.</span>
@@ -69,7 +69,7 @@ export default function Contact() {
           {state.success ? (
             <p
               role="status"
-              className="font-body mt-8 text-[15px] leading-relaxed text-dark/80 md:text-base"
+              className="font-body mx-auto mt-8 max-w-lg text-[15px] leading-relaxed text-dark/80 md:text-base"
             >
               Thanks for reaching out — we&apos;ll be in touch soon. Your next idea
               takes off from here.
