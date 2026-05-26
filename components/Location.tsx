@@ -1,10 +1,9 @@
-// FUEL Coworking — 809 W Main Ave, Suite 212, Spokane, WA
-const STREET_VIEW_LAT = 47.6587514;
-const STREET_VIEW_LNG = -117.4236874;
+// 47°39'32.4"N 117°25'27.0"W — FUEL Coworking, Spokane
+const STREET_VIEW_LAT = 47 + 39 / 60 + 32.4 / 3600;
+const STREET_VIEW_LNG = -(117 + 25 / 60 + 27 / 3600);
 const STREET_VIEW_HEADING = 210;
 
-const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=809+W+Main+Ave+Suite+212+Spokane+WA+99201";
+const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${STREET_VIEW_LAT},${STREET_VIEW_LNG}`;
 
 function getStreetViewEmbedUrl() {
   const key = process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_KEY;
@@ -38,7 +37,7 @@ export default function Location() {
   return (
     <section id="location" className="bg-cream px-6 py-12 lg:px-10 lg:py-16 xl:px-12">
       <div className="mx-auto max-w-site">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <div>
             <h2 className="font-display text-4xl font-bold text-dark md:text-5xl lg:text-6xl">
               find us in spokane
@@ -71,8 +70,8 @@ export default function Location() {
             </a>
           </div>
 
-          <div className="flex flex-col">
-            <div className="relative min-h-[280px] overflow-hidden border border-dark/10 sm:min-h-[360px] lg:min-h-[420px]">
+          <div className="flex w-full flex-col lg:sticky lg:top-20">
+            <div className="relative min-h-[400px] overflow-hidden border border-dark/10 sm:min-h-[480px] lg:min-h-[560px] xl:min-h-[640px]">
               <iframe
                 title="Street View of FUEL Coworking at 809 W Main Ave, Spokane"
                 src={streetViewSrc}
