@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="font-body bg-cream text-dark antialiased">
-        <SmoothScroll />
         {children}
       </body>
     </html>
