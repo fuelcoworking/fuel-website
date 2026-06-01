@@ -2,7 +2,12 @@ import Image from "next/image";
 
 const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 
-const workspaces = [
+const workspaces: {
+  title: string;
+  price: string;
+  description: string;
+  image?: string;
+}[] = [
   {
     title: "Basic Membership",
     price: "$100/month",
@@ -24,6 +29,7 @@ const workspaces = [
   {
     title: "Private Office",
     price: "$600/month",
+    image: "/images/workspaces/private-office.png",
     description:
       "For those that want privacy inside of a coworking environment. Fully lockable and private.",
   },
@@ -45,7 +51,7 @@ export default function Workspaces() {
             >
               <div className="relative min-h-[160px] sm:min-h-0">
                 <Image
-                  src={PLACEHOLDER_IMAGE}
+                  src={space.image ?? PLACEHOLDER_IMAGE}
                   alt={space.title}
                   fill
                   className="object-cover"
