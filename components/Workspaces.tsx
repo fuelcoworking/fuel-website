@@ -16,10 +16,10 @@ const workspaces = [
       "All benefits of the basic membership with an additional 5 free hours for all reservable resources.",
   },
   {
-    title: "Duis aute irure",
-    price: "Dolor in reprehenderit",
+    title: "Permanent Desk",
+    price: "$400/month",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Our premier membership. Want to have a dedicated desk? Make it yours! This is your space to decorate and bring supplies as you see fit. Tailored towards those members who want their desk to feel like home.",
   },
   {
     title: "Excepteur sint occaecat",
