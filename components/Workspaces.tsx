@@ -4,16 +4,16 @@ const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 
 const workspaces = [
   {
-    title: "Hot Desk",
+    title: "Basic Membership",
     price: "$100/month",
     description:
       "Our base membership that allows all access to FUEL Coworking, use of all hot desks, and all member only events.",
   },
   {
-    title: "Adipiscing elit sed",
-    price: "Eiusmod tempor",
+    title: "Hot Desk",
+    price: "$200/month",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "All benefits of the basic membership with an additional 5 free hours for all reservable resources.",
   },
   {
     title: "Duis aute irure",
