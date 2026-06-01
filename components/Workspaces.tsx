@@ -4,10 +4,10 @@ const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 
 const workspaces = [
   {
-    title: "Lorem ipsum dolor",
-    price: "Sit amet consectetur",
+    title: "Hot Desk",
+    price: "$100/month",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Our base membership that allows all access to FUEL Coworking, use of all hot desks, and all member only events.",
   },
   {
     title: "Adipiscing elit sed",
@@ -46,7 +46,7 @@ export default function Workspaces() {
               <div className="relative min-h-[160px] sm:min-h-0">
                 <Image
                   src={PLACEHOLDER_IMAGE}
-                  alt=""
+                  alt={space.title}
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 22vw"
