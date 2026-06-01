@@ -17,6 +17,7 @@ const workspaces: {
   {
     title: "Hot Desk",
     price: "$200/month",
+    image: "/images/workspaces/hot-desk.png",
     description:
       "All benefits of the basic membership with an additional 5 free hours for all reservable resources.",
   },
