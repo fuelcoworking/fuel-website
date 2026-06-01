@@ -24,6 +24,7 @@ const workspaces: {
   {
     title: "Permanent Desk",
     price: "$400/month",
+    image: "/images/workspaces/permanent-desk.png",
     description:
       "Our premier membership. Want to have a dedicated desk? Make it yours! This is your space to decorate and bring supplies as you see fit. Tailored towards those members who want their desk to feel like home.",
   },
