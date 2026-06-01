@@ -22,10 +22,10 @@ const workspaces = [
       "Our premier membership. Want to have a dedicated desk? Make it yours! This is your space to decorate and bring supplies as you see fit. Tailored towards those members who want their desk to feel like home.",
   },
   {
-    title: "Excepteur sint occaecat",
-    price: "Cupidatat non proident",
+    title: "Private Office",
+    price: "$600/month",
     description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "For those that want privacy inside of a coworking environment. Fully lockable and private.",
   },
 ];
 
