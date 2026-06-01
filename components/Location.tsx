@@ -46,10 +46,7 @@ export default function Location() {
       <div className="mx-auto max-w-site">
         <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <div>
-            <p className="font-display text-xs font-medium uppercase tracking-[0.2em] text-amber">
-              Location
-            </p>
-            <h2 className="font-display mt-3 text-4xl font-bold text-cream md:text-5xl lg:text-6xl">
+            <h2 className="font-display text-4xl font-bold text-cream md:text-5xl lg:text-6xl">
               find us in spokane
             </h2>
             <p className="font-body mt-5 max-w-lg text-[15px] leading-relaxed text-cream/85 md:text-base">
