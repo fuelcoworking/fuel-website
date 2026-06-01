@@ -57,7 +57,9 @@ export default function Workspaces() {
                   alt={space.title}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 22vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 45vw, 420px"
+                  quality={92}
+                  unoptimized={Boolean(space.image)}
                 />
               </div>
 
