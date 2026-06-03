@@ -30,9 +30,11 @@ export default function Mission() {
     <section id="mission" className="relative min-h-[520px] lg:min-h-[580px]">
       <Image
         src="/images/mission.png"
-        alt="FUEL coworking community collaborating"
+        alt="FUEL neon sign on a green moss wall"
         fill
         className="object-cover"
+        unoptimized
+        priority
       />
       <div className="absolute inset-0 bg-dark/60" aria-hidden />
 
