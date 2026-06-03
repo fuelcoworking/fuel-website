@@ -29,12 +29,13 @@ export default function Mission() {
   return (
     <section id="mission" className="relative min-h-[520px] lg:min-h-[580px]">
       <Image
-        src="/images/mission.png"
+        src="/images/mission.jpg"
         alt="FUEL neon sign on a green moss wall"
         fill
-        className="object-cover"
-        unoptimized
+        quality={100}
+        sizes="100vw"
         priority
+        className="object-cover"
       />
       <div className="absolute inset-0 bg-dark/60" aria-hidden />
 

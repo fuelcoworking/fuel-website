@@ -31,7 +31,8 @@ export default function Hero() {
         alt="FUEL coworking open-plan workspace in downtown Spokane"
         fill
         priority
-        unoptimized
+        quality={100}
+        sizes="100vw"
         className="object-cover object-[center_55%]"
       />
       <div className="absolute inset-0 bg-black/25" aria-hidden />
