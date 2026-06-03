@@ -28,9 +28,10 @@ export default function Hero() {
     <section className="relative h-[76vh] min-h-[520px] md:h-[80vh] md:min-h-[600px] lg:min-h-[680px]">
       <Image
         src="/images/hero.jpg"
-        alt="FUEL coworking — white letters on a wooden table"
+        alt="FUEL coworking open-plan workspace in downtown Spokane"
         fill
         priority
+        unoptimized
         className="object-cover object-[center_55%]"
       />
       <div className="absolute inset-0 bg-black/25" aria-hidden />
