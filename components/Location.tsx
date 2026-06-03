@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 // 47°39'32.4"N 117°25'27.0"W — FUEL Coworking, Spokane
 const STREET_VIEW_LAT = 47 + 39 / 60 + 32.4 / 3600;
 const STREET_VIEW_LNG = -(117 + 25 / 60 + 27 / 3600);
