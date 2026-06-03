@@ -77,6 +77,12 @@ export default function Location() {
             >
               Get directions
             </a>
+            <Link
+              href="/directions"
+              className="font-body mt-4 block text-[15px] text-amber underline-offset-4 transition-opacity hover:underline hover:opacity-90"
+            >
+              Detailed directions from the street
+            </Link>
           </div>
 
           <div className="flex w-full flex-col lg:sticky lg:top-16">
