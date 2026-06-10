@@ -10,7 +10,7 @@ const workspaces: {
 }[] = [
   {
     title: "Basic Membership",
-    price: "$100/month",
+    price: "$50/month",
     image: "/images/workspaces/basic-membership.png",
     description:
       "Our base membership that allows all access to FUEL Coworking, use of all hot desks, and all member only events.",
