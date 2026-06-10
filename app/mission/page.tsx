@@ -4,24 +4,24 @@ import Link from "next/link";
 
 const pillars = [
   {
-    title: "Lorem ipsum",
+    title: "Community first",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "We measure success by the connections made here — the introductions, collaborations, and friendships that start over a shared coffee pot.",
   },
   {
-    title: "Dolor sit amet",
+    title: "Built for focus",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Thoughtfully designed desks, offices, and quiet corners so you can do your most productive work, then step out to recharge with the community.",
   },
   {
-    title: "Consectetur elit",
+    title: "Proudly local",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "FUEL is rooted in downtown Spokane. When our members grow, the neighborhood grows with them — and that's exactly the point.",
   },
   {
-    title: "Adipiscing tempor",
+    title: "Room to grow",
     description:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "From your first hot desk to a private office, FUEL flexes with you. Start small, scale up, and never outgrow your community.",
   },
 ];
 
@@ -32,26 +32,27 @@ export default function MissionPage() {
       <section className="px-6 pb-16 pt-24 lg:px-10 lg:pb-24 lg:pt-28 xl:px-12">
         <div className="mx-auto max-w-site">
           <p className="font-display text-sm font-medium uppercase tracking-wide text-primary">
-            Lorem ipsum dolor
+            Why we built FUEL
           </p>
           <h1 className="font-display mt-3 max-w-3xl text-4xl font-bold text-dark md:text-5xl lg:text-6xl">
             Our mission
           </h1>
           <p className="font-display mt-6 max-w-2xl text-xl font-bold text-dark md:text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            To give Spokane&apos;s builders a place to do their best work —
+            together.
           </p>
           <div className="mt-8 max-w-2xl space-y-5">
             <p className="font-body text-[15px] leading-relaxed text-dark md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat.
+              FUEL started from a simple belief: the best ideas grow faster when
+              people aren&apos;t working alone. So we built a coworking space in
+              the heart of downtown Spokane where founders, freelancers, and
+              creatives share a room, a coffee pot, and a sense of momentum.
             </p>
             <p className="font-body text-[15px] leading-relaxed text-dark md:text-base">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              More than desks and Wi-Fi, FUEL is a community. We host events,
+              make introductions, and create the everyday collisions that turn a
+              side project into a business and a newcomer into a neighbor. When
+              our members grow, downtown Spokane grows with them.
             </p>
           </div>
 

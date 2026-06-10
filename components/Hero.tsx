@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
@@ -46,12 +47,12 @@ export default function Hero() {
           <span className="block">in spokane</span>
         </h1>
 
-        <a
-          href="#contact"
+        <Link
+          href="/free-day"
           className="font-body w-fit rounded-full bg-white px-6 py-3 text-[15px] font-bold text-dark transition-opacity hover:opacity-90"
         >
           Try a free day
-        </a>
+        </Link>
       </div>
     </section>
   );

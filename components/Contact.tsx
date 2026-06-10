@@ -74,6 +74,19 @@ export default function Contact() {
               Thanks for reaching out — we&apos;ll be in touch soon. Your next idea
               takes off from here.
             </p>
+          ) : state.mailto ? (
+            <div className="mx-auto mt-8 max-w-lg text-center">
+              <p className="font-body text-[15px] leading-relaxed text-dark/80 md:text-base">
+                Almost there — click below to send us your message and
+                we&apos;ll be in touch soon.
+              </p>
+              <a
+                href={state.mailto}
+                className="font-display mt-5 inline-flex items-center gap-1.5 rounded-md bg-primary px-5 py-2.5 text-sm font-normal text-cream transition-opacity hover:opacity-90"
+              >
+                Send my message <span aria-hidden>→</span>
+              </a>
+            </div>
           ) : (
             <form action={handleSubmit} className="mt-6 lg:mt-8">
               {(state.error || interestError) && (

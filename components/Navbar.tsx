@@ -2,7 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { headerNavLinks } from "@/lib/site-links";
+import {
+  headerNavLinks,
+  PROXIMITY_LOGIN_URL,
+  FREE_DAY_URL,
+} from "@/lib/site-links";
 
 function NavLink({
   href,
@@ -67,13 +71,15 @@ export default function Navbar() {
 
           <div className="ml-7 flex items-center gap-5 border-l border-neutral-300 pl-7">
             <a
-              href="#"
+              href={PROXIMITY_LOGIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-body text-[15px] font-normal text-dark transition-opacity hover:opacity-70"
             >
               Member Login
             </a>
             <Link
-              href="/#contact"
+              href={FREE_DAY_URL}
               className="font-body rounded-full bg-dark px-3.5 py-1.5 text-sm font-bold text-white transition-opacity hover:opacity-85"
             >
               Try a free day
@@ -83,7 +89,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3 xl:hidden">
           <Link
-            href="/#contact"
+            href={FREE_DAY_URL}
             className="font-body hidden rounded-full bg-dark px-3.5 py-1.5 text-sm font-bold text-white sm:inline-block"
           >
             Try a free day
@@ -140,7 +146,9 @@ export default function Navbar() {
             ))}
             <li className="border-t border-neutral-200 pt-3">
               <a
-                href="#"
+                href={PROXIMITY_LOGIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-body block py-3 text-[15px] text-dark"
                 onClick={() => setOpen(false)}
               >
@@ -149,7 +157,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/#contact"
+                href={FREE_DAY_URL}
                 className="font-body mt-2 inline-block rounded-full bg-dark px-5 py-2.5 text-[15px] font-bold text-white"
                 onClick={() => setOpen(false)}
               >
