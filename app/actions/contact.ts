@@ -32,7 +32,7 @@ export async function submitContact(
 
   const from = process.env.CONTACT_EMAIL_FROM ?? "FUEL <onboarding@resend.dev>";
 
-  if (process.env.RESEND_API_KEY) {
+  if (resend) {
     const { error } = await resend.emails.send({
       from,
       to: CONTACT_EMAIL,

@@ -31,7 +31,7 @@ export async function submitFreeDay(
 
   // 1) Email staff so they can issue the 24-hour Proximity pass on arrival.
   //    This is the primary channel and works with no extra setup.
-  if (process.env.RESEND_API_KEY) {
+  if (resend) {
     const from =
       process.env.CONTACT_EMAIL_FROM ?? "FUEL <onboarding@resend.dev>";
     try {
