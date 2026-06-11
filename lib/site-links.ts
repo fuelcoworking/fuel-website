@@ -15,7 +15,8 @@ export const CONTACT_EMAIL =
 // Members manage their account, bookings, and access through Proximity.
 // Override per environment with NEXT_PUBLIC_PROXIMITY_LOGIN_URL in Vercel.
 export const PROXIMITY_LOGIN_URL =
-  process.env.NEXT_PUBLIC_PROXIMITY_LOGIN_URL ?? "https://app.proximity.space";
+  process.env.NEXT_PUBLIC_PROXIMITY_LOGIN_URL ??
+  "https://fuelcoworking.proximity.app/login/true";
 
 // Free-day trial signup lives on its own focused page.
 export const FREE_DAY_URL = "/free-day";
