@@ -60,7 +60,7 @@ Adding a token makes it auto-list your upcoming events.
    | Variable | Value |
    |---|---|
    | `EVENTBRITE_API_TOKEN` | your private token |
-   | `EVENTBRITE_ORG_ID` | `110692675491` *(optional — already the default; change only if your org id differs)* |
+   | `EVENTBRITE_ORG_ID` | *leave unset — auto-discovered from the token* |
 4. Redeploy. Live events appear automatically (cached up to 1 hour).
 
 ---

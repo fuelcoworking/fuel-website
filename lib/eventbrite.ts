@@ -2,7 +2,9 @@
 //
 // Environment variables (set in Vercel):
 //   EVENTBRITE_API_TOKEN  Private token from eventbrite.com → Account → Developer → API keys
-//   EVENTBRITE_ORG_ID     Organization id, defaults to FUEL's (110692675491)
+//   EVENTBRITE_ORG_ID     Optional. The API's *organization* id — NOT the number in
+//                         the public /o/<id> URL (that's the organizer-profile id).
+//                         Leave unset and we auto-discover it from the token.
 //
 // If the token is missing or the request fails, getUpcomingEvents() returns an
 // empty array and the Events section falls back to a simple Eventbrite link.
@@ -25,17 +27,41 @@ type EventbriteApiEvent = {
   venue: { name: string | null } | null;
 };
 
-const DEFAULT_ORG_ID = "110692675491";
+// Resolve the API organization id. Prefer an explicit override, otherwise ask
+// Eventbrite which organizations this token belongs to and use the first one.
+async function resolveOrgId(token: string): Promise<string | null> {
+  if (process.env.EVENTBRITE_ORG_ID) return process.env.EVENTBRITE_ORG_ID;
+
+  try {
+    const res = await fetch(
+      "https://www.eventbriteapi.com/v3/users/me/organizations/",
+      {
+        headers: { Authorization: `Bearer ${token}` },
+        next: { revalidate: 3600 },
+      }
+    );
+    if (!res.ok) {
+      console.error("Eventbrite org lookup failed:", res.status, await res.text());
+      return null;
+    }
+    const data = (await res.json()) as { organizations?: { id: string }[] };
+    return data.organizations?.[0]?.id ?? null;
+  } catch (err) {
+    console.error("Eventbrite org lookup error:", err);
+    return null;
+  }
+}
 
 export async function getUpcomingEvents(limit = 6): Promise<FuelEvent[]> {
   const token = process.env.EVENTBRITE_API_TOKEN;
-  const orgId = process.env.EVENTBRITE_ORG_ID ?? DEFAULT_ORG_ID;
-
   if (!token) return [];
+
+  const orgId = await resolveOrgId(token);
+  if (!orgId) return [];
 
   const url =
     `https://www.eventbriteapi.com/v3/organizations/${orgId}/events/` +
-    `?status=live&order_by=start_asc&expand=venue,logo`;
+    `?status=live&order_by=start_asc&time_filter=current_future&expand=venue,logo`;
 
   try {
     const res = await fetch(url, {
