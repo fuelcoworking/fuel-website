@@ -7,6 +7,7 @@ const workspaces: {
   price: string;
   description: string;
   image?: string;
+  cta?: { label: string; href: string };
 }[] = [
   {
     title: "Basic Membership",
@@ -35,6 +36,7 @@ const workspaces: {
     image: "/images/workspaces/private-office.png",
     description:
       "For those that want privacy inside of a coworking environment. Fully lockable and private.",
+    cta: { label: "Join the waitlist", href: "/waitlist" },
   },
 ];
 
@@ -77,10 +79,10 @@ export default function Workspaces() {
                   </p>
                 </div>
                 <a
-                  href="#contact"
+                  href={space.cta?.href ?? "#contact"}
                   className="group font-body mt-5 inline-flex items-center gap-1 text-[15px] text-dark transition-opacity hover:opacity-70"
                 >
-                  Learn more{" "}
+                  {space.cta?.label ?? "Learn more"}{" "}
                   <span
                     aria-hidden
                     className="inline-block transition-transform duration-200 ease-out group-hover:translate-x-1"
